@@ -1,0 +1,48 @@
+.screen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--horizontal-space);
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+.screen-header__title {
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.screen-header__icons {
+  display: flex;
+  position: relative;
+}
+
+.screen-header__icons span {
+  margin-left: 25px;
+
+}
+
+.screen-header__red-dot {
+  background-color: tomato;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  position: absolute;
+  left: 95px;
+  bottom: 15px;
+
+}
+
+@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.screen-header__icons-cog .fa-gear:hover {
+  animation: rotateCog 1s linear infinite;
+}
